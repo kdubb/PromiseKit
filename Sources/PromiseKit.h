@@ -188,6 +188,9 @@ extern AnyPromise * __nonnull dispatch_promise_on(dispatch_queue_t __nonnull que
 
 
 #if defined(__has_include)
+  #if __has_include(<PromiseKit/NSTask+AnyPromise.h>) && __has_include(<Foundation/NSTask.h>)
+    #import <PromiseKit/NSTask+AnyPromise.h>
+  #endif
   #if __has_include(<PromiseKit/ACAccountStore+AnyPromise.h>)
     #import <PromiseKit/ACAccountStore+AnyPromise.h>
   #endif
@@ -208,9 +211,6 @@ extern AnyPromise * __nonnull dispatch_promise_on(dispatch_queue_t __nonnull que
   #endif
   #if __has_include(<PromiseKit/NSNotificationCenter+AnyPromise.h>)
     #import <PromiseKit/NSNotificationCenter+AnyPromise.h>
-  #endif
-  #if __has_include(<PromiseKit/NSTask+AnyPromise.h>)
-    #import <PromiseKit/NSTask+AnyPromise.h>
   #endif
   #if __has_include(<PromiseKit/NSURLConnection+AnyPromise.h>)
     #import <PromiseKit/NSURLConnection+AnyPromise.h>
